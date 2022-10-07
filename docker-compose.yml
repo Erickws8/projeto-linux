@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  srv-web:
+    image: httpd:latest
+    ports:
+    - '80:80'
+    volumes:
+    - /pagina:/usr/local/apache2/htdocs
+    networks:
+      - rede-atual
+
+networks:
+  rede-atual:
